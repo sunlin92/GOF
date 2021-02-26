@@ -1,11 +1,15 @@
 // Program.cs
 namespace SimpleFactor
 {
-    static void Main(string[] args)
+    class Program
     {
-        Product product;
-        product = Factory.GetProduct("A");// 通过工厂类创建产品对象
-        product.MethodSame();
-        product.MethodDiff();
+
+        static void Main(string[] args)
+        {
+            Product product;
+            product = Factory.GetProduct("A");// 通过工厂类创建产品对象
+            product.MethodSame();
+            product.MethodDiff();
+        }
     }
 }

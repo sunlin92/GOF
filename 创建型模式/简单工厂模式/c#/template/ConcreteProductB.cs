@@ -1,7 +1,7 @@
 // ConcreteProductB.cs
 namespace SimpleFactor
 {
-    class ConcreteProductA : Product
+    class ConcreteProductB : Product
     {
         //实现业务方法
         public override void MethodDiff()
