@@ -7,9 +7,8 @@ namespace SimpleFactorSample
     {
         static void Main(string[] args)
         {
-            Chart chart = ChartFactory.GetChart("Pie");//通过静态工厂方法创建产品
+            Chart chart = ChartFactory.GetChart("pie");//通过静态工厂方法创建产品
             chart.Display();
-            Console.Read();
         }
     }
 }
