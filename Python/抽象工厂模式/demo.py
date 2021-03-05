@@ -33,8 +33,7 @@ class DiagramFactory:
                     self.diagram[y + component.y][x + component.x] = char
 
         def save(self, filename_or_file):
-            file = None if isinstance(
-                filename_or_file, str) else filename_or_file
+            file = None if isinstance(filename_or_file, str) else filename_or_file
             try:
                 if file is None:
                     file = open(filename_or_file, "w", encoding="utf-8")
@@ -107,8 +106,7 @@ font-family="sans-serif" font-size="{fontsize}">{text}</text>"""
             self.diagram.append(component.svg)
 
         def save(self, filename_or_file):
-            file = None if isinstance(
-                filename_or_file, str) else filename_or_file
+            file = None if isinstance(filename_or_file, str) else filename_or_file
             try:
                 if file is None:
                     file = open(filename_or_file, "w", encoding="utf-8")
@@ -136,9 +134,7 @@ font-family="sans-serif" font-size="{fontsize}">{text}</text>"""
 
 def main():
 
-    import os
     import sys
-    import tempfile
 
     def create_diagram(factory):
         diagram = factory.make_diagram(30, 7)
@@ -148,10 +144,9 @@ def main():
         diagram.add(text)
         return diagram
 
-    diagram = create_diagram(DiagramFactory)
-    # diagram = create_diagram(SvgDiagramFactory)
+    # diagram = create_diagram(DiagramFactory)
+    diagram = create_diagram(SvgDiagramFactory)
     diagram.save(sys.stdout)
-    htmlFilename = os.path.join(tempfile.gettempdir(), "login.html")
 
 
 if __name__ == "__main__":
