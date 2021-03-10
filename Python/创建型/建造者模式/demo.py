@@ -112,8 +112,7 @@ if __name__ == "__main__":
 
     def add_label(self, text, row, column, **kwargs):
         name = self._canonicalize(text)
-        create = """self.{}Label = ttk.Label(self, text="{}:")""".format(
-            name, text)
+        create = """self.{}Label = ttk.Label(self, text="{}:")""".format(name, text)
         layout = """self.{}Label.grid(row={}, column={}, sticky=tk.W, \
 padx="0.75m", pady="0.75m")""".format(
             name, row, column
