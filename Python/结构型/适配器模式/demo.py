@@ -84,9 +84,7 @@ class HtmlWriter:
         self.file.write("<!doctype html>\n<html>\n")
 
     def title(self, title):
-        self.file.write(
-            "<head><title>{}</title></head>\n".format(escape(title))
-        )
+        self.file.write("<head><title>{}</title></head>\n".format(escape(title)))
 
     def start_body(self):
         self.file.write("<body>\n")
