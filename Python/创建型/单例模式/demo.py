@@ -4,7 +4,6 @@ import time
 import random
 
 
-
 def do_something():
     """
     我是一个非常消耗资源的函数

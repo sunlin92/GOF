@@ -45,11 +45,10 @@ class Phone(metaclass=abc.ABCMeta):
     def set_handle_app(self, app):
         if not isinstance(app, App):
             raise TypeError(
-                "Expected object of type App, got {}".format(
-                    type(app).__name__
-                )
+                "Expected object of type App, got {}".format(type(app).__name__)
             )
         self.app = app
+
     pass
 
 

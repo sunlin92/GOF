@@ -77,12 +77,12 @@ class ChessBoard(AbstractBoard):
 
     def populate_board(self):
         rows = (
-                ((0, 7), ROOK),
-                ((1, 6), KNIGHT),
-                ((2, 5), BISHOP),
-                ((3,), QUEEN),
-                ((4,), KING),
-            )
+            ((0, 7), ROOK),
+            ((1, 6), KNIGHT),
+            ((2, 5), BISHOP),
+            ((3,), QUEEN),
+            ((4,), KING),
+        )
         for row, color in ((0, BLACK), (7, WHITE)):
             for columns, kind in rows:
                 for column in columns:
