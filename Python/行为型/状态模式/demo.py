@@ -6,11 +6,13 @@ import functools
 
 CARS, VANS, TRUCKS = ("cars", "vans", "trucks")
 
+
 def coroutine(function):
     """
     根据参数创建对应的生成器对象
     进行next调用,并返回生成器对象
     """
+
     @functools.wraps(function)
     def wrapper(*args, **kw):
         generator = function(*args, **kw)
@@ -33,6 +35,7 @@ class Counter:
     """
     计数器
     """
+
     def __init__(self, *names):
         self.anonymous = not bool(names)
         if self.anonymous:
@@ -58,6 +61,7 @@ class Event:
     """
     事件对象
     """
+
     def __init__(self, name, count=1):
         if not name.isidentifier():
             raise ValueError("names must be valid identifiers")
@@ -105,7 +109,6 @@ class Multiplexer:
 
 
 def main():
-
     def show(discription, car_counter, commercial_counter, total_counter):
         print(
             "After 100 {} events: cars={} vans={} trucks={} total={}".format(
